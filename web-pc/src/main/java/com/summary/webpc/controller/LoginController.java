@@ -1,8 +1,8 @@
 package com.summary.webpc.controller;
 
-import com.summary.webpc.entity.UserEntity;
+import com.summary.beans.entity.AdminEntity;
 import com.summary.webpc.service.LoginService;
-import com.summary.webpc.service.UserService;
+import com.summary.webpc.service.AdminService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -19,7 +19,7 @@ import java.util.Map;
 public class LoginController {
 
     @Autowired
-    private UserService userService;
+    private AdminService adminService;
 
     @Autowired
     private LoginService loginService;
@@ -29,22 +29,11 @@ public class LoginController {
 //    String name;
 
     /**
-     * 测试页面
-     * @return
-     */
-    @RequestMapping("test")
-    public String test(){
-        return "test";
-    }
-
-
-    /**
      * 登录页面
      * @return
      */
     @RequestMapping(value = {"/",""})
     public String login(){
-        System.out.println("连接服务器成功");
         return "login";
     }
 
@@ -74,24 +63,30 @@ public class LoginController {
     @RequestMapping(value = "/validateCode", method = RequestMethod.POST)
     @ResponseBody
     public Map validateCode(HttpServletRequest request){
+        String userEmail = request.getParameter("userEmail");
+        System.out.println(userEmail);
         Map map = new HashMap<>();
-        loginService.validateCode(request);
+        loginService.validateCode(request,userEmail);
         return map;
     }
 
-
+    /**
+     * 验证登录名与密码是否正确
+     * @param request
+     * @return
+     */
     @RequestMapping("verify")
     @ResponseBody
     public HashMap verify(HttpServletRequest request){
         String userName = request.getParameter ("userName");
         String password = request.getParameter ("password");
 
-        UserEntity userEntity = new UserEntity();
-        userEntity.setPassWord ("admin");
-        userEntity.setUserName ("admin");
-        HashMap hashMap = userService.get(userEntity);
+        AdminEntity adminEntity = new AdminEntity();
+        adminEntity.setPassWord("admin");
+        adminEntity.setUserName("admin");
+        HashMap hashMap = adminService.get(adminEntity);
         System.out.println(hashMap);
-        return userService.get(userEntity);
+        return adminService.get(adminEntity);
     }
 
 

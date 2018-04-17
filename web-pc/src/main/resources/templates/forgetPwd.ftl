@@ -1,5 +1,5 @@
 <#assign basePath=request.contextPath>
-<html lang="en">
+<html>
 <head>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -19,7 +19,7 @@
             <div class="login_padding" id="login_model">
                 <h2>注册邮箱</h2>
                 <label>
-                    <input type="text" name="userName" id="username" class="txt_input txt_input2" placeholder="请输入注册邮箱...">
+                    <input type="text" name="userName" id="userEmail" class="txt_input txt_input2" placeholder="请输入注册邮箱...">
                 </label>
                 <h2>密码</h2>
                 <label>
@@ -38,31 +38,46 @@
     </form>
 </div>
 <script type="text/javascript">
-    $(document).keydown(function(e){
+   /* $(document).keydown(function(e){
         var ev = document.all ? window.event : e;
         if (ev.keyCode == 13) {
             $("#loginBut").click();
             return false; //阻止回车之后的页面刷新而使得搜索的事件读不到
         }
     })
-
+*/
     $(function () {
         $("#send").click(function(){
-            console.log("test")
+            var userEmail = $("#userEmail").val();
+            console.log(userEmail);
+            VerificationCodeCount(3);
+            console.log(userEmail)
             $.ajax({
-                data:{"aa":"aa"},
+                data:{"userEmail":userEmail},
                 url:"${basePath}/login/validateCode",
                 type:"post",
                 success:function(data){
-
+                    alert("已将验证码发送至您的邮箱");
                 }
             })
 
         })
 
-
+        //验证码倒计时
+        function VerificationCodeCount(time) {
+            if(time == 0){
+                $("#send").removeAttr("disabled")
+                $("#send").html("发送验证码")
+            }else {
+                $("#send").attr("disabled","disabled");
+                $("#send").html(time+"秒后重发");
+                time--;
+                setTimeout(function () {
+                    VerificationCodeCount(time);
+                },1000)
+            }
+        }
     })
-
     //背景
     window.onload = function () {
         var config = {

@@ -6,10 +6,20 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="module-beans" />
+        <module name="module-common" />
+        <module name="module-system" />
         <module name="web-pc" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="modlue-common" target="1.8" />
+      <module name="modlues" target="1.8" />
+      <module name="module-beans" target="1.8" />
+      <module name="module-common" target="1.8" />
+      <module name="module-system" target="1.8" />
+      <module name="modulecommon" target="1.8" />
+      <module name="modules" target="1.8" />
       <module name="summary" target="1.8" />
       <module name="web-pc" target="1.8" />
     </bytecodeTargetLevel>

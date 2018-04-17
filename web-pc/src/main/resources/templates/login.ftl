@@ -28,13 +28,13 @@
 
 
                 <p class="forgot"><a id="forgetPwd" href="javascript:void(0);">忘记密码?</a></p>
-                <div class="rem_sub">
+                    <div class="rem_sub">
                     <div class="rem_sub_l">
                         <input type="checkbox" name="checkbox" id="save_me">
                         <label for="checkbox">记住密码</label>
                     </div>
                     <label>
-                        <input class="sub_button" type="submit" id="loginBut" value="登录" style="opacity: 0.7;">
+                        <input class="sub_button" id="loginBut" type="submit" value="登录" style="opacity: 0.7;">
                     </label>
                 </div>
             </div>
@@ -42,6 +42,7 @@
     </form>
 </div>
 <script type="text/javascript">
+    //enter键登录
     $(document).keydown(function(e){
         var ev = document.all ? window.event : e;
         if (ev.keyCode == 13) {
@@ -51,14 +52,11 @@
     })
 
     $(function () {
-
         $("#loginBut").click(function () {
-//            alert(31);
-            console.log("test")
-            //var loginForm = $("#loginForm").serialize();
+            var loginForm = $("#loginForm").serialize();
             console.log(loginForm)
             $.ajax({
-                //data:loginForm,
+                data:loginForm,
                 url:"${basePath}/login/verify",
                 success:function(data){
                     console.log(data);
@@ -85,7 +83,7 @@
 
     })
 
-
+    //页面背景效果
     window.onload = function () {
         var config = {
             vx: 4,

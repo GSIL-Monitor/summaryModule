@@ -2,6 +2,10 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/modules/module-beans/module-beans.iml" filepath="$PROJECT_DIR$/modules/module-beans/module-beans.iml" />
+      <module fileurl="file://$PROJECT_DIR$/modules/module-common/module-common.iml" filepath="$PROJECT_DIR$/modules/module-common/module-common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/modules/module-system/module-system.iml" filepath="$PROJECT_DIR$/modules/module-system/module-system.iml" />
+      <module fileurl="file://$PROJECT_DIR$/modules/modules.iml" filepath="$PROJECT_DIR$/modules/modules.iml" />
       <module fileurl="file://$PROJECT_DIR$/summary.iml" filepath="$PROJECT_DIR$/summary.iml" />
       <module fileurl="file://$PROJECT_DIR$/web-pc/web-pc.iml" filepath="$PROJECT_DIR$/web-pc/web-pc.iml" />
     </modules>
