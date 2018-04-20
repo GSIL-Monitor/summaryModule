@@ -84,7 +84,7 @@
     })
 
     //页面背景效果
-    window.onload = function () {
+    window.onload = function () {  s
         var config = {
             vx: 4,
             vy: 4,
