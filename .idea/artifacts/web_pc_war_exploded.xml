@@ -9,8 +9,6 @@
         <element id="directory" name="lib">
           <element id="library" level="project" name="Maven: org.springframework.boot:spring-boot-starter-freemarker:2.0.0.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework.boot:spring-boot-starter:2.0.0.RELEASE" />
-          <element id="library" level="project" name="Maven: org.springframework.boot:spring-boot:2.0.0.RELEASE" />
-          <element id="library" level="project" name="Maven: org.springframework.boot:spring-boot-autoconfigure:2.0.0.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework.boot:spring-boot-starter-logging:2.0.0.RELEASE" />
           <element id="library" level="project" name="Maven: ch.qos.logback:logback-classic:1.2.3" />
           <element id="library" level="project" name="Maven: ch.qos.logback:logback-core:1.2.3" />
@@ -66,6 +64,9 @@
           <element id="archive" name="module-beans-0.0.1-SNAPSHOT.jar">
             <element id="module-output" name="module-beans" />
           </element>
+          <element id="library" level="project" name="Maven: org.springframework.boot:spring-boot-devtools:2.0.0.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework.boot:spring-boot:2.0.0.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework.boot:spring-boot-autoconfigure:2.0.0.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework.boot:spring-boot-starter-web-services:2.0.0.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework:spring-oxm:5.0.4.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework.ws:spring-ws-core:3.0.0.RELEASE" />

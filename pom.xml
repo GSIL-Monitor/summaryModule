@@ -57,6 +57,24 @@
 			<artifactId>spring-boot-starter-tomcat</artifactId>
 			<scope>provided</scope>
 		</dependency>
+
+		<!--springboot热加载-->
+		<!--<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-devtools</artifactId>
+			<optional>true</optional>
+		</dependency>-->
 	</dependencies>
 
+	<!--<build>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+				&lt;!&ndash;<configuration>
+					<fork>true</fork>//该配置必须
+				</configuration>&ndash;&gt;
+			</plugin>
+		</plugins>
+	</build>-->
 </project>

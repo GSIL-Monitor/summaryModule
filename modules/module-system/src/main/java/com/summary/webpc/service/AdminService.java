@@ -1,6 +1,6 @@
 package com.summary.webpc.service;
 
-import com.summary.beans.entity.AdminEntity;
+import com.summary.beans.entity.system.AdminEntity;
 import org.springframework.stereotype.Service;
 
 import java.util.HashMap;

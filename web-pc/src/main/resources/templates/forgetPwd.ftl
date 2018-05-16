@@ -50,7 +50,7 @@
         $("#send").click(function(){
             var userEmail = $("#userEmail").val();
             console.log(userEmail);
-            VerificationCodeCount(3);
+            VerificationCodeCount(60);
             console.log(userEmail)
             $.ajax({
                 data:{"userEmail":userEmail},

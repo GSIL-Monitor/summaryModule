@@ -1,6 +1,6 @@
 package com.summary.webpc.service.impl;
 
-import com.summary.beans.entity.AdminEntity;
+import com.summary.beans.entity.system.AdminEntity;
 import com.summary.webpc.mapper.AdminMapper;
 import com.summary.webpc.service.AdminService;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -40,8 +40,7 @@ public class LoginServiceImpl implements LoginService {
     /**
      *
      */
-    //@Autowired
-    private CommonUtil commonUtil;
+    private CommonUtil commonUtil = new CommonUtil();
 
     @Override
     public Map validateCode(HttpServletRequest request,String userEmail) {
@@ -52,6 +51,7 @@ public class LoginServiceImpl implements LoginService {
         verificationCode = verificationCode + 100000;*/
         request.getSession().setAttribute("verificationCode", verificationCode);
         request.getSession().setAttribute("userName", "测试用户");
+        //将验证码储存到sesstion中，并设置过期时间为60秒
         HttpSession session = request.getSession(true);
         session.setMaxInactiveInterval(60);
 

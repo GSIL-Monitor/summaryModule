@@ -101,6 +101,18 @@
             <artifactId>module-system</artifactId>
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
+<!--springboot热加载-->
+		<!--<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-devtools</artifactId>
+			<scope>provided</scope>
+			<optional>true</optional>
+		</dependency>-->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-devtools</artifactId>
+		</dependency>
+
     </dependencies>
 
 	<build>
@@ -128,6 +140,30 @@
 				</configuration>
 			</plugin>
 
+			<!--springboot热加载-->
+			<!--<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+				<dependencies>
+					&lt;!&ndash; spring热部署 &ndash;&gt;
+					<dependency>
+						<groupId>org.springframework</groupId>
+						<artifactId>springloaded</artifactId>
+						<version>1.2.6.RELEASE</version>
+					</dependency>
+				</dependencies>
+				<configuration>
+					<mainClass>cn.springboot.Mainspringboot</mainClass>
+				</configuration>
+			</plugin>-->
+			<!--springboot热加载-->
+			<!--<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+				<configuration>
+					<fork>true</fork>//该配置必须
+				</configuration>
+			</plugin>-->
 		</plugins>
 	</build>
 

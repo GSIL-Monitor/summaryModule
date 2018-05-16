@@ -28,4 +28,5 @@ public class BaseEntity {
     // 上次修改时间
     private LocalDateTime lastModifiedDate;
 
+
 }

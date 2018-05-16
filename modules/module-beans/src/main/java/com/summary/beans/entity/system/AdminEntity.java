@@ -1,9 +1,7 @@
-package com.summary.beans.entity;
+package com.summary.beans.entity.system;
 
 import com.summary.base.BaseEntity;
 import lombok.Data;
-
-import java.time.LocalDateTime;
 
 /**
  * Created by dengshengyu on 2018/3/29
@@ -27,9 +25,11 @@ public class AdminEntity extends BaseEntity{
 
     private Integer state;
 
+
     /*private String avatar;
 
     private String lastLoginIp;
 
     private LocalDateTime lastLoginDate;*/
+
 }
